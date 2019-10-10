@@ -25,12 +25,12 @@ body {
   overflow-y: auto;
 }
 /* Layout */
-.wrapper {
+/*.wrapper {
   height: 100%;
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-}
+}*/
 .wrapper:before,
 .wrapper:after {
   content: " ";
