@@ -17,9 +17,9 @@ import Crud from './Components/Crud.js'
 function App() {
   return (
     <div >
-    
+
       {/*<Employee name="Monika"/>*/}
-      
+
         {/*<ContactList contact={contacts}/>*/}
             {/*<Employee name='Monika'/>
             <Student name="Avi"/>
@@ -59,30 +59,30 @@ function App() {
                                 </span>
                             </a>
                             <ul className="treeview-menu">
-                                  
+
                                  <li><Link to={'/content'} ><i className="fa fa-circle-o"></i> Userinfo</Link></li>
                                 <li><Link to={'/crud'} ><i className="fa fa-circle-o"></i> About</Link></li>
-                                <li><Link to={'/form'} ><i className="fa fa-circle-o"></i> Contact</Link></li>
+                                {/*<li><Link to={'/form'} ><i className="fa fa-circle-o"></i> Contact</Link></li>*/}
                                 <li><Link to={'/blogcard'} ><i className="fa fa-circle-o"></i> Card</Link></li>
                             </ul>
                         </li>
-                        
-                        
-                        
-                      
+
+
+
+
                     </ul>
                 </section>
-            </aside> 
+            </aside>
             <Switch>
                 <Route exact path='/content' component={ Content } />
-              <Route exact path='/form' component={ Form } />
+              {/*<Route exact path='/form' component={ Form } />*/}
              <Route exact path='/Crud' component={ Crud } />
                 <Route exact path='/blogcard' component={ Blogcard }  />
-              
+
           </Switch>
 
              </Router>
-        
+
     </div>
   );
 }
