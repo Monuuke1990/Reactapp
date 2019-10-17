@@ -3,22 +3,25 @@ import logo from './logo.svg';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import "./card.scss";
 import Employee from './Components/Functional';
-import Student from './Components/ClassCompo';
+//import Student from './Components/ClassCompo';
 import Eventhandle from './Components/HandleEvent';
 import Form from './Components/Form.js';
 import ContactList from './Components/ContactList.js';
 import Header from './Components/Header.js';
 import Blogcard from './Components/Flipcard.js';
 import Content from './Components/content.js';
-import Crud from './Components/Crud.js'
+import Crud from './Components/Crud.js';
+import Carousel from './Components/carousel';
+//import Defaultpage from './Components/default';
 
 
 
 function App() {
+  
   return (
     <div >
-
-      {/*<Employee name="Monika"/>*/}
+     
+      
 
         {/*<ContactList contact={contacts}/>*/}
             {/*<Employee name='Monika'/>
@@ -26,6 +29,8 @@ function App() {
             <Eventhandle/>
              */}
       <Header/>
+      {/*<Defaultpage/>*/}
+{/*<Employee name="Monika"/>*/}
 
       <Router>
          <aside className="main-sidebar">
@@ -60,10 +65,11 @@ function App() {
                             </a>
                             <ul className="treeview-menu">
 
-                                 <li><Link to={'/content'} ><i className="fa fa-circle-o"></i> Userinfo</Link></li>
+                                 <li><Link to={'/'} ><i className="fa fa-circle-o"></i> Userinfo</Link></li>
                                 <li><Link to={'/crud'} ><i className="fa fa-circle-o"></i> About</Link></li>
                                 {/*<li><Link to={'/form'} ><i className="fa fa-circle-o"></i> Contact</Link></li>*/}
                                 <li><Link to={'/blogcard'} ><i className="fa fa-circle-o"></i> Card</Link></li>
+                                 <li><Link to={'/Carousel'} ><i className="fa fa-circle-o"></i> Carousel</Link></li>
                             </ul>
                         </li>
 
@@ -71,13 +77,16 @@ function App() {
 
 
                     </ul>
+                 {/*<Student />*/}
                 </section>
             </aside>
             <Switch>
-                <Route exact path='/content' component={ Content } />
+                
+                <Route  exact path='/' component={ Content } />
               {/*<Route exact path='/form' component={ Form } />*/}
-             <Route exact path='/Crud' component={ Crud } />
-                <Route exact path='/blogcard' component={ Blogcard }  />
+             <Route  path='/Crud' component={ Crud } />
+               <Route  path='/Carousel' component={ Carousel } />
+                <Route  path='/blogcard' component={ Blogcard }  />
 
           </Switch>
 
